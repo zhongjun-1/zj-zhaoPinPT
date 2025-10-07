@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招聘平台</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 内联图标CSS -->
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .icon-briefcase::before { content: "💼"; }
+        .icon-search::before { content: "🔍"; }
+        .icon-map-marker::before { content: "📍"; }
+        .icon-clock-o::before { content: "🕒"; }
+        .icon-building::before { content: "🏢"; }
+        .icon-book::before { content: "📚"; }
+        .icon-info-circle::before { content: "ℹ️"; }
+        .icon-bars::before { content: "☰"; }
+        .icon-angle-right::before { content: "▶️"; }
+        .icon-facebook::before { content: "📘"; }
+        .icon-twitter::before { content: "🐦"; }
+        .icon-linkedin::before { content: "💼"; }
+        .icon-instagram::before { content: "📸"; }
+      }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
