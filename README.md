@@ -1,16 +1,126 @@
-# React + Vite
+# 招聘平台前端应用 (zj-zhaoPinPT)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一个基于React + Vite构建的现代化招聘平台前端应用，提供用户认证、职位浏览、公司展示和职业指导等功能。
 
-Currently, two official plugins are available:
+## 📋 项目简介
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+本项目是一个功能完整的招聘平台前端实现，支持求职者浏览职位、查看公司详情、获取职业指导，以及完整的用户认证系统。平台采用响应式设计，确保在桌面和移动设备上都有良好的用户体验。
 
-## React Compiler
+## 🚀 主要功能
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 用户认证系统
+- 🔐 安全的用户注册与登录功能
+- 📧 邮箱验证机制
+- 👤 自动头像生成（基于用户邮箱）
+- 🔑 忘记密码功能
 
-## Expanding the ESLint configuration
+### 职位与公司浏览
+- 📋 职位列表与详情查看
+- 🏢 公司信息展示
+- 🔍 搜索与筛选功能
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 用户体验优化
+- 📱 完全响应式设计，支持移动端和桌面端
+- 🎨 现代化UI设计
+- 🔄 平滑的页面过渡与交互反馈
+
+## 🛠️ 技术栈
+
+- **前端框架**: React 18
+- **构建工具**: Vite 5
+- **样式处理**: CSS Modules
+- **路由管理**: React Router
+- **状态管理**: Context API (自定义AuthProvider)
+- **头像生成**: ui-avatars.com服务
+
+## 📁 项目结构
+
+```
+src/
+├── components/          # 可复用组件
+│   ├── AuthProvider.jsx # 认证状态管理
+│   ├── Navbar.jsx       # 导航栏组件
+│   ├── JobsSection.jsx  # 职位列表组件
+│   └── ...
+├── pages/               # 页面组件
+│   ├── HomePage.jsx     # 首页
+│   ├── JobsPage.jsx     # 职位列表页
+│   ├── LoginPage.jsx    # 登录页
+│   ├── RegisterPage.jsx # 注册页
+│   └── ...
+├── assets/              # 静态资源
+├── App.jsx              # 应用入口组件
+└── main.jsx             # 主入口文件
+```
+
+## 📦 安装与运行
+
+1. 克隆项目
+```bash
+git clone https://github.com/zhongjun-1/zj-zhaoPinPT.git
+cd zj-zhaoPinPT
+```
+
+2. 安装依赖
+```bash
+npm install
+```
+
+3. 开发模式运行
+```bash
+npm run dev
+```
+
+4. 构建生产版本
+```bash
+npm run build
+```
+
+5. 预览生产版本
+```bash
+npm run preview
+```
+
+## 🔧 功能说明
+
+### 用户认证流程
+- 注册时使用邮箱和密码创建账户
+- 登录后自动生成用户头像并显示在导航栏
+- 支持自动登录（使用localStorage持久化）
+
+### 头像生成机制
+- 基于用户邮箱前缀生成唯一用户名
+- 使用ui-avatars.com服务生成个性化头像
+- 支持不同背景和文字颜色
+
+## 🎨 效果展示
+
+### 主要界面
+- **首页**: 展示平台简介、热门职位和公司
+- **职位列表**: 卡片式布局，支持筛选和搜索
+- **用户中心**: 显示用户信息和头像
+
+### 交互效果
+- 登录/注册表单验证与反馈
+- 平滑的导航栏状态切换
+- 移动端响应式菜单
+- 加载状态和错误处理
+
+## 🔮 未来规划
+- [ ] 添加职位收藏功能
+- [ ] 实现简历上传和管理
+- [ ] 集成即时通讯系统
+- [ ] 添加数据分析与推荐功能
+
+## 📝 开发说明
+
+本项目使用Vite作为构建工具，支持热模块替换(HMR)，提高开发效率。推荐使用现代浏览器进行开发和测试。
+
+## 🤝 贡献指南
+欢迎提交Issue和Pull Request来帮助改进这个项目。
+
+## 📄 许可证
+MIT License
+
+© 2023 招聘平台前端团队
+动画80.jpg
